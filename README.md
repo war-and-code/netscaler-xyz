@@ -1,2 +1,2 @@
-# netscaler-xyz
-Security probing toolbox for Citrix NetScaler.
+# NetScaler XYZ
+Security probing toolbox for Citrix NetScaler, web-based.
