@@ -1,7 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <title>Cookie Decrypt - NetScaler XYZ</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/sub.css">
 </head>
 <body>
+    <div class="center-wrap">
+        <div class="netscaler-container">NetScaler<span class="xyz-container">XYZ</span></div>
+        <div class="decrypt-container">Cookie Decrypt</div>
+
+        <div class="form-container">
+            <label for="load-cookie">Load Balancer Persistence Cookie</label><br>
+            <input type="text" name="load-cookie" id="load-cookie" value="NSC_Qspe-xxx.bwjwb.dp.vl-IUUQ=ffffffff50effd8445525d5f4f58455e445a4a423660">
+        </div>
+
+        <div class="results-container">
+            <hr>
+            <label for="server-name">Server Name</label><br>
+            <input type="text" name="server-name" id="server-name" value="Prod-www.xxxxx.co.uk-HTTP" readonly><br>
+            <label for="server-ip">Server IP</label><br>
+            <input type="text" name="server-ip" id="server-ip" value="83.231.227.149" readonly><br>
+            <label for="server-port">Server Port</label><br>
+            <input type="text" name="server-port" id="server-port" value="80" readonly>
+        </div>
+
+        <div class="button">
+            <a href="/">Back to Menu</a>
+            <div class="mask"></div>
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

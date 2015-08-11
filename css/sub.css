@@ -28,12 +28,17 @@ body {
     font-size: 1.6rem;
     margin-left: -65px;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .xyz-container {
     padding-left: 5px;
     font-family: 'Noto Sans', sans-serif;
+}
+
+.decrypt-container {
+    margin-left: -53px;
+    margin-right: auto;
 }
 
 span {
@@ -449,12 +454,14 @@ span:nth-child(40) {
 	display: block;
 	border: 2px solid #2e2e2e;
 	text-transform: uppercase;
+    margin-top: 10px;
+    margin-left: 20px;
     font-size: 0.8rem;
 	letter-spacing: .3rem;
 	padding: 13px 15px;
 	text-align: center;
-	max-width: 200px;
-	min-width: 150px;
+	max-width: 160px;
+	min-width: 160px;
 	cursor: pointer;
 	overflow: hidden;
 	-webkit-transition: border 1s cubic-bezier(0.19,1,.22,1),color .6s cubic-bezier(0.19,1,.22,1);
@@ -504,4 +511,24 @@ span:nth-child(40) {
 
 .button:hover .shift {
 	padding-left: 5px;
+}
+
+.form-container {
+    margin-top: 10px;
+    margin-left: -60px;
+}
+
+label {
+    color: gray;
+    font-size: 0.8em;
+}
+
+input {
+    color: black;
+}
+
+.results-container {
+    margin-top: 13px;
+    margin-left: -60px;
+    margin-bottom: 20px;
 }
