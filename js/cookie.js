@@ -9,7 +9,7 @@
 
 
 // This regex will be used to identify if a valid cookie was entered, before actually parsing
-var re = new RegExp( "NSC_([a-zA-Z0-9\-\_\.]*)=[0-9a-f]{8}([0-9a-f]{8}).*([0-9a-f]{4})$" );
+var re = new RegExp( 'NSC_([a-zA-Z0-9\-\_\.]*)=[0-9a-f]{8}([0-9a-f]{8}).*([0-9a-f]{4})$' );
 
 var serverName, serverIP, serverPort;
 
@@ -27,6 +27,8 @@ function parseCookie() {
 
     if ( regexTest ) {
         regexMatches = re.exec( encryptedCookie );
+        console.log('Printing regex matches');
+        console.log(regexMatches);
         serverName = regexMatches[1];
         serverIP = regexMatches[2];
         serverPort = regexMatches[3];
@@ -57,19 +59,25 @@ function decryptServerName() {
 
 // Decrypts the XOR encryption used for the NetScaler server IP
 function decryptServerIP() {
+    console.log('encrypted hex server ip: ' + serverIP);
+    var decimalServerIP = parseInt( serverIP, 16 );
+    console.log('encrypted decimal server ip: ' + decimalServerIP);
     var IPKey = 0x03081e11;
     var decodedIP = ( serverIP ^ IPKey ).toString(16);
     var realIP;
 
-    return 'realIP';
+    return realIP;
 }
 
 // Decrypts the XOR encryption used on the NetScaler server port
 function decryptServerPort() {
+    console.log('encrypted hex server port: ' + serverPort);
+    var decimalServerPort = parseInt( serverPort, 16 );
+    console.log('encrypted decimal server port: ' + decimalServerPort);
     var portKey = 0x3630;
     var realPort = serverPort ^ portKey;
 
-    return 'realPort';
+    return realPort;
 }
 
 // Everything together - on change of encrypted cookie form, this gets called

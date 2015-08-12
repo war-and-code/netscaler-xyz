@@ -100,6 +100,9 @@ def decryptCookie(cookie):
     @return: Returns RealName, RealIP and RealPort
     """
     servicename, serverip, serverport = parseCookie(cookie)
+    print("server name: " + str(servicename))
+    print("server ip: " + str(serverip))
+    print("server port: " + str(serverport))
     realname = decryptServiceName(servicename)
     realip = decryptServerIP(serverip)
     realport = decryptServerPort(serverport)
